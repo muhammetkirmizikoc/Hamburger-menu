@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript ile Yapılmıs Menü</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tailwind.css">
+    <script src="https://kit.fontawesome.com/837be0c474.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="menu flex bg-gray-100 items-center justify-center px-3 h-20 mx-0 mx-auto rounded w-full">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Logo-logosu.png" alt="">
+            </div>
+            <i id="tikla"
+                class="fa-solid fa-bars ml-auto text-white text-2xl bg-red-500 cursor-pointer md:text-gray-100 p-2 rounded "></i>
+            <ul id="menu-2"
+                class="bg-gray-900 md:bg-transparent flex flex-col absolute md:relative top-20 px-10 py-6 mx-auto md:px-0 md:py-0 rounded-xl md:py-1 md:ml-20 md:pl-10">
+                <li><a class=" block font-bold hover:bg-red-500 hover:text-white rounded text-xl px-10 md:p-4 md:mr-10 text-center py-5 bg-gray-200 duration-400 md:w-full mb-3 md:mb-0"
+                        href="#">Hakkımızda</a></li>
+                <li><a class=" block font-bold hover:bg-red-500 hover:text-white rounded text-xl px-10 md:p-4 md:mr-10 text-center py-5 bg-gray-200 duration-400 md:w-full mb-3 md:mb-0"
+                        href="#">Biz Kimiz</a></li>
+                <li><a class=" block font-bold hover:bg-red-500 hover:text-white rounded text-xl px-10 md:p-4 md:mr-10 text-center py-5 bg-gray-200 duration-400 md:w-full mb-3 md:mb-0"
+                        href="#">Galeri</a></li>
+                <li><a class=" block font-bold hover:bg-red-500 hover:text-white rounded text-xl px-10 md:p-4 md:mr-10 text-center py-5 bg-gray-200 duration-400 md:w-full mb-3 md:mb-0"
+                        href="#">İletişim</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <script>
+        // JavaScript ile menüyü kontrol etme
+
+        // Menüyü ve tikla butonunu seç
+        const menu = document.getElementById('menu-2');
+        const tiklaButton = document.getElementById('tikla');
+
+        // Butona tıklandığında
+        tiklaButton.addEventListener('click', function () {
+            // Menünün pozisyonunu değiştir
+            menu.style.left = (menu.style.left === '-100%' || menu.style.left === '') ? '0' : '-100%';
+        });
+
+
+    </script>
+</body>
+
+</html>
